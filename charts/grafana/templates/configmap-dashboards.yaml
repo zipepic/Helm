@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboards
+data:
+  {{- range $path, $file := .Files.Glob .Values.grafana.dashboardFilesPath }}
+  {{ $base := base $path }}
+  {{ $base }}: |-
+  {{ $file | toString | nindent 4 }}
+  {{- end }}

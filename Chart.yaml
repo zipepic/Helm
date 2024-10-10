@@ -1,0 +1,12 @@
+apiVersion: v2
+name       : Monitoring
+description: My monitoring
+type       : application
+version    : 0.1.0
+appVersion : "1.2.3"
+
+keywords:
+  - apache
+  - http
+  - https
+  - denisastahov

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasources
+data:
+  datasource.yml: |-
+    {{ (.Files.Get .Values.grafana.datasourceFile) | nindent 4 }}
